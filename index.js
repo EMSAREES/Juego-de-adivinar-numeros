@@ -24,6 +24,17 @@ botonComprobarEl.addEventListener("click", () => {
         botonComprobarEl.textContent = "Comprobar";
         oportunidadesRestantesEl.textContent = totalOportunidades;
         textoOportunidadesRestantesEl.textContent = totalOportunidades;
+    }else if (botonComprobarEl.textContent === "Jugar de nuevo") {
+       
+        numeroAleatorio = Math.floor(Math.random() * 100);
+        totalOportunidades = 10;
+        entradaEl.value = "";
+        entradaEl.disabled = false;
+        adivinanzaEl.textContent = "Haz tu adivinanza";
+        adivinanzaEl.style.color = "#000";
+        botonComprobarEl.textContent = "Comprobar";
+        oportunidadesRestantesEl.textContent = totalOportunidades;
+        textoOportunidadesRestantesEl.textContent = totalOportunidades;
     } else {
         totalOportunidades--;
         let valorEntrada = parseInt(entradaEl.value);
